@@ -1,0 +1,31 @@
+@import "../../../styles/variables.scss";
+
+nav{
+  background-image: url("../../../assets/img/nav-fondo.jpg");
+  background-size:cover ;
+  background-position:center ;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+  .nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+
+
+  }
+  .menu{
+    color:$color-primary;
+    scale: 2;
+  }
+
+}

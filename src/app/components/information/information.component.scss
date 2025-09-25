@@ -1,0 +1,55 @@
+@import '../../../styles/variables.scss';
+
+section{
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  li{
+    font-size: medium;
+  }
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+.beneficios{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+  .button-beneficios{
+    display: flex;
+    justify-content: end;
+  }
+  .information{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+.nuestras-camillas{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-primary;
+  justify-content: start;
+
+  .information-2{
+    display: flex;
+    justify-content: center;
+
+  }
+  ul{
+
+    color:white
+    ;
+  }
+
+}
+
+}
+img{
+  border-radius: 10px;
+}

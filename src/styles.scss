@@ -1,0 +1,80 @@
+@use '@angular/material' as mat;
+
+// Custom Theming for Angular Material
+// Include the common styles for Angular Material.
+@include mat.core();
+
+// Define el radio global para los botones
+$my-radius: 20px;  /* Aquí defines el radio de los bordes de los botones */
+
+/* Aplica border-radius globalmente a los botones de Angular Material */
+.mat-raised-button, .mat-flat-button, .mat-stroked-button, .mat-button {
+  border-radius: 20px;  /* Cambia este valor según lo que necesites */
+}
+
+// Define tus colores personalizados
+$color-primary: #14311C;  /* Verde oscuro */
+$color-secondary: #F3F4EF; /* Blanco claro */
+
+// Define una paleta personalizada para el color primario (completa)
+$thermosalud-primary: mat.define-palette((
+  50: $color-primary,
+  100: $color-primary,
+  200: $color-primary,
+  300: $color-primary,
+  400: $color-primary,
+  500: $color-primary,  /* Tono principal */
+  600: $color-primary,
+  700: $color-primary,
+  800: $color-primary,
+  900: $color-primary,   /* Tono más oscuro */
+  contrast: (
+    500: #ffffff  /* Contraste blanco para textos en botones primarios */
+  )
+));
+
+// Define una paleta personalizada para el color secundario (completa)
+$thermosalud-accent: mat.define-palette((
+  50: $color-secondary,
+  100: $color-secondary,
+  200: $color-secondary,
+  300: $color-secondary,
+  400: $color-secondary,
+  500: $color-secondary,  /* Tono principal */
+  600: $color-secondary,
+  700: $color-secondary,
+  800: $color-secondary,
+  900: $color-secondary,  /* Tono más oscuro */
+  contrast: (
+    500: #000000  /* Contraste negro para textos en botones secundarios */
+  )
+));
+
+// La paleta warn puede quedarse como está (opcional, defaults to red)
+$thermosalud-warn: mat.define-palette(mat.$red-palette);
+
+// Crea el tema con los colores personalizados
+$thermosalud-theme: mat.define-light-theme((
+  color: (
+    primary: $thermosalud-primary,
+    accent: $thermosalud-accent,
+    warn: $thermosalud-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+  border-radius: $my-radius  /* Agrega el radio a los componentes */
+));
+
+// Incluye los estilos del tema para todos los componentes
+@include mat.all-component-themes($thermosalud-theme);
+
+// Estilos globales opcionales
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+

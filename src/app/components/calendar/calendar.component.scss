@@ -1,0 +1,196 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles.scss';
+.calendario{
+  padding: 40px;
+
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Ajusta el ancho según tus necesidades */
+  max-width: 400px; /* Ancho máximo */
+  animation: fadeIn 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .success-message, .error-message {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .success-message i.check-icon {
+      width: 40px;
+      height: 40px;
+      background: green;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .error-message i.error-icon {
+      width: 40px;
+      height: 40px;
+      background: red;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .success-message p {
+      color: green;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .error-message p {
+      color: red;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .Buttons{
+      .Reservar{
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #27ae60;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-68:hover {
+  background-color: #1e8449;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+.button-68:active {
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+.button-68:hover {
+  box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+}
+      }
+      .cancelar{
+        appearance: none;
+        backface-visibility: hidden;
+        background-color: red;
+        border-radius: 8px;
+        border-style: none;
+        box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: normal;
+        line-height: 1.5;
+        outline: none;
+        overflow: hidden;
+        padding: 13px 20px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transform: translate3d(0, 0, 0);
+        transition: all .3s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: top;
+        white-space: nowrap;
+      }
+
+      .button-68:hover {
+        background-color: #1e8449;
+        opacity: 1;
+        transform: translateY(0);
+        transition-duration: .35s;
+      }
+
+      .button-68:active {
+        transform: translateY(2px);
+        transition-duration: .35s;
+      }
+
+      .button-68:hover {
+        box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+
+      }
+    }
+  }
+
+
+/* Animación opcional para que aparezca suavemente */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.elegantshadow {
+  font-size: 30px; /* Ajusta el tamaño del texto según tus necesidades */
+  color: #14311C; /* Verde oscuro para el texto */
+  text-transform: uppercase; /* Mayúsculas */
+  letter-spacing: 0.15em; /* Espaciado entre letras */
+  text-shadow:
+    0px 1px 0px #ffffff,  /* Sombra blanca */
+    0px 2px 0px #e5f2e8,  /* Verde claro */
+    0px 3px 0px #cde6d4,
+    0px 4px 0px #b5d9bf,
+    0px 5px 0px #9dcdaa,
+    0px 6px 0px #85c196,
+    0px 7px 0px #6cb481,
+    0px 8px 7px rgba(20, 49, 28, 0.7); /* Sombra verde oscuro difusa */
+}
